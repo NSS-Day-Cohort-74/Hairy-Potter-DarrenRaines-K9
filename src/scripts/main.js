@@ -46,6 +46,6 @@ plate = toSellOrNotToSell(plate)
 //console.log(plate);
 console.log(usePottery())
 // Invoke the component function that renders the HTML list
-const potteryHTML = potteryListHTML(usePottery())
-let potteryInnerHTML = document.querySelector(".potteryList")
-potteryInnerHTML.innerHTML = potteryHTML
+const potteryHTML = potteryListHTML(usePottery())//here i pass the result of usePottery() into potteryListHTML() incorder  to get the new string of HTML and store that into a new varibale pottery HTML
+let potteryInnerHTML = document.querySelector(".potteryList")//here i target the fist element in my document object model with the class name potterList the reason its ".potteryList" and not "#potteryList" is we are targeting a class not an id 
+potteryInnerHTML.innerHTML = potteryHTML//Here set the value of our innerHTML to equal the value of the HTML stored inside potteryHTML
