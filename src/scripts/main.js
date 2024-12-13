@@ -1,14 +1,14 @@
 //Here I am importing the required modules in order to invoke their respective modules
 import { firePottery } from "./kiln.js"
+import { toSellOrNotToSell, usePottery} from "./PotteryCatalog.js"
 import { makePottery } from "./PotteryWheel.js"
-
 // Make 5 pieces of pottery at the wheel
 //In lines 6-19 I am creating a new piece of pottery, by creating a new variable(ex "mug, bowl, etc) and invoking our function createPottery() and passing in an argument of the desired objects properties.
 //Once the argument is made I then console.log in order to view the new values of our created object 
 let mug = makePottery("mug", 1, 3)
 console.log(mug)
 
-let vase = makePottery("vase", 1, 3)
+let vase = makePottery("vase", 7, 3)
 console.log(vase)
 
 let bowl = makePottery("bowl", 5, 7)
@@ -33,7 +33,16 @@ console.log(jar)
 firePottery(plate, 1700)
 console.log(plate)
 // Determine which ones should be sold, and their price
-
+toSellOrNotToSell(mug)
+console.log(mug)
+toSellOrNotToSell(vase)
+console.log(vase)
+toSellOrNotToSell(bowl)
+console.log(bowl)
+toSellOrNotToSell(jar)
+console.log(jar)
+toSellOrNotToSell(plate)
+console.log(plate)
 
 // Invoke the component function that renders the HTML list
-
+console.log(usePottery())
